@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PC utilities\\Study files\\.Second year term 2\\.PROG1442\\Assignment\\Final Assignment\\Loc_FirstGame\\Loc_FirstGame\\Loc_FirstGame.csproj": {}
+    "C:\\PC utilities\\Git\\GitUpload\\Loc_FirstGame\\The_Thing\\Loc_FirstGame\\Loc_FirstGame.csproj": {}
   },
   "projects": {
-    "C:\\PC utilities\\Study files\\.Second year term 2\\.PROG1442\\Assignment\\Final Assignment\\Loc_FirstGame\\Loc_FirstGame\\Loc_FirstGame.csproj": {
+    "C:\\PC utilities\\Git\\GitUpload\\Loc_FirstGame\\The_Thing\\Loc_FirstGame\\Loc_FirstGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PC utilities\\Study files\\.Second year term 2\\.PROG1442\\Assignment\\Final Assignment\\Loc_FirstGame\\Loc_FirstGame\\Loc_FirstGame.csproj",
+        "projectUniqueName": "C:\\PC utilities\\Git\\GitUpload\\Loc_FirstGame\\The_Thing\\Loc_FirstGame\\Loc_FirstGame.csproj",
         "projectName": "Loc_FirstGame",
-        "projectPath": "C:\\PC utilities\\Study files\\.Second year term 2\\.PROG1442\\Assignment\\Final Assignment\\Loc_FirstGame\\Loc_FirstGame\\Loc_FirstGame.csproj",
+        "projectPath": "C:\\PC utilities\\Git\\GitUpload\\Loc_FirstGame\\The_Thing\\Loc_FirstGame\\Loc_FirstGame.csproj",
         "packagesPath": "C:\\Users\\NoFun\\.nuget\\packages\\",
-        "outputPath": "C:\\PC utilities\\Study files\\.Second year term 2\\.PROG1442\\Assignment\\Final Assignment\\Loc_FirstGame\\Loc_FirstGame\\obj\\",
+        "outputPath": "C:\\PC utilities\\Git\\GitUpload\\Loc_FirstGame\\The_Thing\\Loc_FirstGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
