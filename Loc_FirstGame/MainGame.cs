@@ -1,15 +1,18 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Loc_FirstGame.Sources.Engine;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace Loc_FirstGame
 {
-    public class Game1 : Game
+    public class MainGame : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        public Game1()
+        World world;
+
+        public MainGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -25,9 +28,12 @@ namespace Loc_FirstGame
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            Globals.content = this.Content;
+            Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            world = new World();
         }
 
         protected override void Update(GameTime gameTime)
@@ -37,6 +43,8 @@ namespace Loc_FirstGame
 
             // TODO: Add your update logic here
 
+            world.Update();
+
             base.Update(gameTime);
         }
 
@@ -45,6 +53,12 @@ namespace Loc_FirstGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
+            Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+
+            world.Draw();
+
+            Globals.spriteBatch.End();
 
             base.Draw(gameTime);
         }

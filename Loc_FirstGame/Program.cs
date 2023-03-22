@@ -1,3 +1,3 @@
 ﻿
-using var game = new Loc_FirstGame.Game1();
+using var game = new Loc_FirstGame.MainGame();
 game.Run();
