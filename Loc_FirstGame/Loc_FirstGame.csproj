@@ -23,7 +23,7 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\2D\" />
+    <Folder Include="Content\2D\Misc\" />
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Fonts\" />
   </ItemGroup>

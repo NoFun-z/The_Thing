@@ -1,5 +1,4 @@
-﻿using Loc_FirstGame.Sources.Engine;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -8,15 +7,17 @@ namespace Loc_FirstGame
     public class MainGame : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        //private SpriteBatch _spriteBatch;
 
         World world;
+
+        Basic2D cursor;
 
         public MainGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            IsMouseVisible = false;
         }
 
         protected override void Initialize()
@@ -33,6 +34,11 @@ namespace Loc_FirstGame
 
             // TODO: use this.Content to load your game content here
 
+            cursor = new Basic2D("2D/Misc/CursorArrow", new Vector2(0, 0), new Vector2(40, 40));
+
+            Globals.keyboard = new McKeyboard();
+            Globals.mouse = new McMouseControl();
+
             world = new World();
         }
 
@@ -43,7 +49,13 @@ namespace Loc_FirstGame
 
             // TODO: Add your update logic here
 
+            Globals.keyboard.Update();
+            Globals.mouse.Update();
+
             world.Update();
+
+            Globals.keyboard.UpdateOld();
+            Globals.mouse.UpdateOld();
 
             base.Update(gameTime);
         }
@@ -56,7 +68,9 @@ namespace Loc_FirstGame
 
             Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 
-            world.Draw();
+            world.Draw(Vector2.Zero);
+
+            cursor.Draw(new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(0, 0), SpriteEffects.None);
 
             Globals.spriteBatch.End();
 
