@@ -34,7 +34,9 @@ namespace Loc_FirstGame
 
             // TODO: use this.Content to load your game content here
 
-            cursor = new Basic2D("2D/Misc/CursorArrow", new Vector2(0, 0), new Vector2(40, 40));
+            Texture2D Cursor = Globals.content.Load<Texture2D>("2D/Misc/CursorArrow");
+
+            cursor = new Basic2D(Cursor, new Vector2(0, 0), new Vector2(40, 40), null);
 
             Globals.keyboard = new McKeyboard();
             Globals.mouse = new McMouseControl();

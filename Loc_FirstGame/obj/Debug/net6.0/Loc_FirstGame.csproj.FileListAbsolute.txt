@@ -48,5 +48,10 @@ C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\obj\Debug\ne
 C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\obj\Debug\net6.0\Loc_FirstGame.pdb
 C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\obj\Debug\net6.0\Loc_FirstGame.genruntimeconfig.cache
 C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\obj\Debug\net6.0\ref\Loc_FirstGame.dll
-C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\Content\2D\MainChar.xnb
 C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\Content\2D\Misc\CursorArrow.xnb
+C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\Content\2D\MyMaintransit2.xnb
+C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\Content\2D\MyMaintransit3.xnb
+C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\MonoGame.Extended.dll
+C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\MonoGame.Extended.Animations.dll
+C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\PC utilities\Git\GitUpload\Loc_FirstGame\The_Thing\Loc_FirstGame\bin\Debug\net6.0\Content\2D\MyMainIndle.xnb
