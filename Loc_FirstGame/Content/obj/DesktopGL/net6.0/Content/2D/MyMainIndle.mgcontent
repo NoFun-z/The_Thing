@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/PC utilities/Git/GitUpload/Loc_FirstGame/The_Thing/Loc_FirstGame/Content/2D/MyMainIndle.png</SourceFile>
-  <SourceTime>2023-03-24T03:38:48.8826253-04:00</SourceTime>
+  <SourceTime>2023-03-24T15:44:29.1018292-04:00</SourceTime>
   <DestFile>C:/PC utilities/Git/GitUpload/Loc_FirstGame/The_Thing/Loc_FirstGame/Content/bin/DesktopGL/Content/2D/MyMainIndle.xnb</DestFile>
-  <DestTime>2023-03-24T03:40:07.7134209-04:00</DestTime>
+  <DestTime>2023-03-24T15:44:40.9164075-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
