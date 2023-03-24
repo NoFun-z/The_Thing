@@ -10,48 +10,56 @@ namespace Loc_FirstGame
 {
     public class Hero : Basic2D
     {
+        private const int NumFrames = 4;
+
+        private Texture2D spriteSheet;
+        private Rectangle[] rectangles;
+        private int currentFrame;
+        private int frameCount;
+        private int frameDelay = 18; // Increase this value to slow down the animation
+
         public float speed;
         public float sprintSpeed;
         public bool isFacingRight = true;
+        public bool isMoving;
 
-        // Animation properties
-        private int animationIndex = 0;
-        private float animationTimer = 0f;
-        private const float animationDelay = 0.2f; // Time between animation frames
-        private Texture2D[] animationFrames = new Texture2D[3]; // Array of animation frames
-
-        public Hero(string PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
+        public Hero(Texture2D spriteSheet, Vector2 POS, Vector2 DIMS, Rectangle[] rectangles) : base(spriteSheet, POS, DIMS, rectangles)
         {
+            this.spriteSheet = spriteSheet;
             speed = 1.0f;
             sprintSpeed = 3.2F;
-
-            // Load animation frames
-            animationFrames[0] = Globals.content.Load<Texture2D>("idle1");
-            animationFrames[1] = Globals.content.Load<Texture2D>("idle2");
-            animationFrames[2] = Globals.content.Load<Texture2D>("idle3");
+            this.rectangles = rectangles;
         }
 
         public override void Update()
         {
-            // Update animation
-            if (speed == 0f)
+            base.Update();
+
+            if (Globals.keyboard.GetPress("A") || Globals.keyboard.GetPress("D") || Globals.keyboard.GetPress("W") || Globals.keyboard.GetPress("S"))
             {
-                animationTimer += Globals.DeltaTime; // Increment animation timer
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
 
-                if (animationTimer >= animationDelay)
+            if (!isMoving)
+            {
+                frameCount++;
+                if (frameCount > frameDelay)
                 {
-                    animationIndex++; // Switch to next animation frame
-                    if (animationIndex >= animationFrames.Length) // Loop back to first frame
+                    currentFrame++;
+                    if (currentFrame >= NumFrames)
                     {
-                        animationIndex = 0;
+                        currentFrame = 0; // reset to first frame
                     }
-
-                    animationTimer = 0f; // Reset animation timer
+                    frameCount = 0;
                 }
             }
             else
             {
-                animationIndex = 0; // Reset animation frame when moving
+                currentFrame = 0;
             }
 
             if (Globals.keyboard.GetPress("A"))
@@ -102,15 +110,23 @@ namespace Loc_FirstGame
             }
 
             //rot = Globals.RotateTowards(pos, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y));
-
-            base.Update();
         }
 
-        public override void Draw(Vector2 OFFSET)
+        public override void Draw(Vector2 OFFSET, Rectangle? sourceRectangle, SpriteEffects spriteEffects)
         {
-            Vector2 origin = new Vector2(myModel.Width / 2, myModel.Height / 2);
-            SpriteEffects spriteEffects = !isFacingRight ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-            base.Draw(OFFSET, origin, spriteEffects);
+            spriteEffects = isFacingRight ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+            if (myModel != null)
+            {
+                Rectangle destinationRectangle = new Rectangle(
+                    Convert.ToInt32(pos.X + OFFSET.X),
+                    Convert.ToInt32(pos.Y + OFFSET.Y),
+                    Convert.ToInt32(dims.X),
+                    Convert.ToInt32(dims.Y));
+
+                sourceRectangle = rectangles[currentFrame];
+
+                base.Draw(OFFSET, sourceRectangle, spriteEffects);
+            }
         }
     }
 }

@@ -4,8 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/PC utilities/Git/GitUpload/Loc_FirstGame/The_Thing/Loc_FirstGame/Content/2D/MainChar.png</File>
     <File>C:/PC utilities/Git/GitUpload/Loc_FirstGame/The_Thing/Loc_FirstGame/Content/2D/Misc/CursorArrow.png</File>
+    <File>C:/PC utilities/Git/GitUpload/Loc_FirstGame/The_Thing/Loc_FirstGame/Content/2D/MyMainIndle.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
